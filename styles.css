@@ -1,0 +1,102 @@
+/* Toàn bộ body của trang */
+body {
+    font-family: Arial, sans-serif; /* Thiết lập phông chữ cho toàn bộ trang */
+    margin: 0; /* Xóa khoảng cách mặc định của trình duyệt xung quanh body */
+    padding: 0; /* Xóa khoảng cách padding mặc định của trình duyệt xung quanh body */
+    background-color: #000000; /* Thiết lập màu nền tối cho trang */
+}
+
+/* Container chứa tất cả các phần tử */
+.container {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
+    flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
+    width: 100%; /* Đặt chiều rộng của container chiếm toàn bộ chiều rộng của phần tử chứa */
+    margin: 0 auto; /* Căn giữa container theo chiều ngang */
+    padding: 5px; /* Thêm khoảng cách padding 5px xung quanh nội dung trong container */
+}
+
+/* Các kiểu chung cho từng section */
+.section {
+    margin-bottom: 40px; /* Thêm khoảng cách dưới mỗi section */
+}
+
+/* Các kiểu cho tiêu đề trong section */
+.section h1 {
+    margin: 0; /* Xóa khoảng cách mặc định trên và dưới tiêu đề */
+    padding-bottom: 10px; /* Thêm khoảng cách dưới tiêu đề */
+    font-size: 24px; /* Đặt kích thước font chữ cho tiêu đề */
+    border-bottom: none; /* Xóa đường viền dưới tiêu đề nếu có */
+    color: #000000; /* Đặt màu chữ cho tiêu đề là trắng */
+}
+
+/* Các kiểu cho mỗi phần trong section */
+.part {
+    line-height: 1;
+    text-align:justify;
+    margin: 5px; /* Thêm khoảng cách xung quanh mỗi phần */
+    padding: 10px; /* Thêm khoảng cách padding xung quanh nội dung trong phần */
+    background-color: #202020; /* Đặt màu nền của phần là trắng */
+    border-radius: 8px; /* Bo tròn các góc của phần với bán kính 8px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho phần để tạo hiệu ứng nổi bật */
+}
+
+/* Các kiểu cho tiêu đề trong mỗi phần */
+.part h2 {
+    margin: 30px; /* Xóa khoảng cách mặc định trên và dưới tiêu đề */
+    font-size: 20px; /* Đặt kích thước font chữ cho tiêu đề trong phần */
+    color: #ffffff; /* Đặt màu chữ cho tiêu đề là xám đậm */
+}
+
+/* Các kiểu cho đoạn văn bản trong mỗi phần */
+.part p {
+    margin: 5px 0 0; /* Thêm khoảng cách trên đoạn văn và xóa khoảng cách dưới đoạn văn */
+    font-size: 16px; /* Đặt kích thước font chữ cho đoạn văn bản */
+    color: #ffffff; /* Đặt màu chữ cho đoạn văn bản là xám nhạt */
+}
+
+/* Các kiểu cho bố cục ngang */
+.horizontal {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
+    flex-direction: row; /* Sắp xếp các phần tử con theo chiều ngang */
+    width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng của phần tử chứa */
+}
+
+/* Các kiểu cho mỗi phần trong bố cục ngang */
+.horizontal .part {
+    flex: 1; /* Đảm bảo các phần tử chiếm đều chiều rộng */
+    min-height: 70vh; /* Đặt chiều cao tối thiểu của phần là 60% chiều cao của phần tử chứa */
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào tổng chiều rộng và chiều cao */
+}
+
+/* Các kiểu cho bố cục lưới (grid) */
+.grid {
+    display: grid; /* Sử dụng CSS Grid để sắp xếp các phần tử con */
+    grid-template-columns: repeat(3, 1fr); /* Tạo 3 cột bằng nhau */
+    grid-template-rows: auto auto; /* Tạo 2 hàng với chiều cao tự động dựa trên nội dung */
+    gap: 0; /* Xóa khoảng cách giữa các phần tử */
+}
+
+/* Các kiểu cho tiêu đề trong bố cục lưới */
+.grid h1 {
+    grid-column: span 3; /* Tiêu đề chiếm toàn bộ 3 cột */
+    margin: 0; /* Xóa khoảng cách mặc định trên và dưới tiêu đề */
+    padding-bottom: 10px; /* Thêm khoảng cách dưới tiêu đề */
+    font-size: 24px; /* Đặt kích thước font chữ cho tiêu đề */
+    color: #fff; /* Đặt màu chữ cho tiêu đề là trắng */
+}
+
+/* Các kiểu cho nút */
+.btn {
+    background-color: #8c3aff; /* Đặt màu nền của nút là tím */
+    color: rgb(0, 0, 0); /* Đặt màu chữ của nút là đen */
+    padding: 20px 20px; /* Thêm khoảng cách padding cho nút */
+    border: none; /* Xóa border mặc định của nút */
+    border-radius: 100px; /* Bo tròn các góc của nút với bán kính 100px */
+    cursor: pointer; /* Thay đổi con trỏ thành hình bàn tay khi di chuột lên nút */
+    font-size: 10px; /* Đặt kích thước font chữ cho nút */
+}
+
+/* Các kiểu cho nút khi di chuột qua */
+.btn:hover {
+    background-color: #8d75c4; /* Thay đổi màu nền của nút khi di chuột qua */
+}
